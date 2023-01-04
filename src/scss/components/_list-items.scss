@@ -1,0 +1,31 @@
+.list-items {
+  display: flex;
+  gap: 2rem;
+
+  & > ul {
+    flex: 1;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    margin-bottom: 2rem;
+
+    .icon {
+      display: inline-block;
+      width: 4.3rem;
+      height: 3rem;
+      background-color: $lightblue;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: .3rem 1.5rem 0 0;
+
+      svg {
+        color: $primary;
+        width: 1.2rem;
+      }
+    }
+  }
+}
