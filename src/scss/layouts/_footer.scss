@@ -1,0 +1,17 @@
+footer {
+  .top-footer {
+    padding: 8rem 0;
+    background-color: $honeydew;
+
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+  }
+
+  .bottom-footer {
+    background-color: $dark;
+    color: $dark2;
+  }
+}

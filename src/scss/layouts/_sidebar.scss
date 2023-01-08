@@ -1,78 +1,68 @@
 .sidebar {
-  display: flex;
-  flex-flow: column;
-  row-gap: 4rem;
+  .widget {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
 
-  .widget-title {
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 2.4rem;
     margin-bottom: 2rem;
+    text-align: center;
   }
 
-  .widget-list {
-    list-style: none;
+  .bio-block {
+    text-align: center;
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    img {
+      margin-bottom: 2rem;
+    }
 
-      &:hover {
-        color: $primary;
+    p {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid $gray;
+    }
+
+    .social-links {
+      list-style: none;
+      display: inline-flex;
+      column-gap: 2rem;
+      padding-top: 2rem;
+
+      a {
+        color: $dark;
       }
     }
   }
 
-  .tags {
-    a {
-      text-decoration: none;
-      color: inherit;
-      display: inline-block;
-      padding: 1rem 2rem;
-      background-color: $lighter;
-      border-radius: 2rem;
-      margin: 0 1rem 1.2rem 0;
-
-      &:hover {
-        background-color: $gray;
-        color: $light;  
-      }
-    }
-  }
-
-  .post-list {
-    list-style: none;
+  .newsletter-form {
     display: flex;
     flex-flow: column;
     row-gap: 2rem;
 
-    li {
-      display: flex;
+    input {
+      background-color: $light2;
+      border: none;
+      border-bottom: 1px solid $primary;
+      padding: 1.2rem 1.6rem;
+      width: 100%;
+    }
 
-      .image-wrap {
-        width: 8rem;
-        height: 8rem;
-        border-radius: 1rem;
-        overflow: hidden;
-        margin-right: 2rem;
+    button {
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      padding: 1.2rem 1.6rem;
+      background-color: $dark;
+      color: $light2;
+      transition: all 0.3s ease;
 
-        img {
-          width: 100%;
-        }
-      }
-
-      h5 {
-        font-size: 1.8rem;
-        margin-bottom: 1.6rem;
-      }
-
-      .meta-data {
-        display: inline-flex;
-        margin-right: 1.6rem;
-        align-items: center;
-        color: $grayer;
-
-        svg {
-          width: 1.6rem;
-          margin-right: .6rem;
-        }
+      &:hover {
+        background-color: $primary;
       }
     }
   }
@@ -80,19 +70,45 @@
   .search-form {
     position: relative;
 
-    input[type="search"] {
+    input {
+      background-color: $light2;
+      border: none;
+      border-bottom: 1px solid $primary;
+      padding: 1.2rem 1.6rem;
       width: 100%;
-      padding: 1.2rem;
-      border-radius: 2rem;
-      border: 1px solid $gray;
     }
 
-    svg {
+    button {
       position: absolute;
-      width: 1.6rem;
+      background: none;
+      border: none;
+      right: 1rem;
       top: 50%;
-      right: 1.6rem;
       transform: translateY(-50%);
+      color: $primary;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    figure {
+      width: 50%;
+      line-height: 0;
+      height: 150px;
+      border: 2px solid $light;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
     }
   }
 }

@@ -1,0 +1,25 @@
+.testimonial-block {
+  margin-top: 10rem; 
+  text-align: center;
+
+  .quote {
+    font-family: "Playfair Display", serif;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    color: $dark;
+  }
+
+  .name {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1.6rem;
+    margin-top: 3rem;
+
+    &::before {
+      content: "";
+      height: 2px;
+      width: 10px;
+      background-color: $dark;
+    }
+  }
+}
