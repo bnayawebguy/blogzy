@@ -12,6 +12,7 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "jquery": "^3.6.3",
     "sass": "^1.57.1",
     "sticky-sidebar": "^3.3.1"
   }

@@ -4,6 +4,10 @@
     padding: 0 20rem;
     margin-bottom: 4rem;
 
+    @include breakpoint(mobile) {
+      padding: 0;
+    }
+
     .date {
       display: inline-flex;
       align-items: center;
@@ -86,10 +90,11 @@
     margin-bottom: 4rem;
 
     .image {
-      width: 140px;
-      height: 120px;
+      width: 12rem;
+      height: 12rem;
       overflow: hidden;
       border-radius: 50%;
+      flex-shrink: 0;
 
       img {
         object-fit: cover;
@@ -111,6 +116,10 @@
     display: flex;
     column-gap: 8rem;
     margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+      flex-wrap: wrap;
+    }
 
     h4 {
       color: $gray2;
@@ -152,12 +161,24 @@
     }
 
     .next {
+      @include breakpoint(mobile) {
+        margin-top: 2rem;
+      }
+
       a {
         flex-flow: row-reverse;
+
+        @include breakpoint(mobile) {
+          flex-flow: row;
+        }
       }
 
       .title {
         text-align: right;
+        
+        @include breakpoint(mobile) {
+          text-align: left;
+        }
       }
 
       span {
@@ -190,8 +211,9 @@
     }
 
     .image {
-      width: 90px;
-      height: 90px;
+      width: 9rem;
+      height: 9rem;
+      flex-shrink: 0;
       border-radius: 50%;
       overflow: hidden;
 
@@ -241,6 +263,10 @@
       row-gap: 3rem;
       padding: 0 20rem;
 
+      @include breakpoint(mobile) {
+        padding: 0 4rem;
+      }
+
       .half {
         display: flex;
         column-gap: 3rem;
@@ -275,7 +301,7 @@
         background-color: $dark;
         color: $light;
         cursor: pointer;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
 
         &:hover {
           background-color: $primary;

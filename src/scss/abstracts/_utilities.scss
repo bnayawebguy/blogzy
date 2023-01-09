@@ -34,6 +34,25 @@
   width: 60%;
 }
 
+.md-width-70 {
+  @include breakpoint(mobile) {
+    width: 70%;
+  }
+}
+
+.sm-width-100 {
+  @include breakpoint(mobile) {
+    width: 100% !important;
+  }
+}
+
+.sm-hide {
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+
 .width-25 {
   width: 25%;
 }
@@ -56,6 +75,12 @@
 
 .m-b-4 {
   margin-bottom: 4rem;
+}
+
+.md-m-b-8 {
+  @include breakpoint(mobile) {
+    margin-bottom: 8rem;
+  }
 }
 
 .font-5 {
