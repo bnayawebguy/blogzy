@@ -24,7 +24,7 @@
       }
 
       &.active {
-        a {
+        & > a {
           color: $primary;
         }
       }
