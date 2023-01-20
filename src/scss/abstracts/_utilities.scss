@@ -83,6 +83,12 @@
   }
 }
 
+.sm-m-b-3 {
+  @include breakpoint(mobile) {
+    margin-bottom: 3rem;
+  }
+}
+
 .font-5 {
   font-size: 5rem;
 }
